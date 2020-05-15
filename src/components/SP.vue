@@ -44,7 +44,49 @@
             </el-row>
         </div>
     </el-main>
-    <el-aside width="30%">Aside</el-aside>
+    <el-aside class="right-panel" width="30%">
+        <div class="check-groups">
+        <el-row :gutter="0">
+            <el-checkbox v-model="autoClean">自动管路清洗</el-checkbox>
+            <label>清洗次数: {{ countClean }}</label>
+            <el-checkbox v-model="isAddSulphuricAcid">全不加硫酸 </el-checkbox>
+            <el-checkbox v-model="isBasicProcess">碱性法</el-checkbox>
+            <el-checkbox v-model="isSelectAutoCome">选择自动进样</el-checkbox>
+            <label><font color="green" v-if="isConnected">&emsp;&emsp;&emsp;&emsp;已连接</font><font color="red" v-else> &emsp;&emsp;&emsp;&emsp;未连接</font></label>
+        </el-row>
+        </div>
+
+        <div class="blank-consume">
+            <el-row>
+                <label> 空白消耗量V0(ml): </label><label>{{consume_num}}</label>
+            </el-row>
+            <el-row>
+                <label> 标定消耗体积V2(ml): </label><label>{{consume_v2}}</label>
+            </el-row>
+            <el-row>
+                <label>校正系数Ｋ:</label><label>{{adjust_num}}</label>
+            </el-row>
+        </div>
+
+        <div class="data-charts">
+            <ve-histogram :data="chartData" :legend-visible="false" :judge-width="true" :settings="chartSettings" :extend="chartExtend" height="220px"></ve-histogram>
+        </div>
+
+        <div class="summer">
+            <el-row>
+                <label> 总数: </label><label>{{total_num}}</label>
+                <label> 预计用时: </label><label>{{pre_time}}</label>
+            </el-row>
+            <el-row>
+                <label> 已测: </label><label>{{test_num}}</label>
+            </el-row>
+            <el-row>
+                <label>待测:</label><label>{{untest_num}}</label>
+                <label> 当前用时: </label><label>{{past_time}}</label>
+            </el-row>
+        </div>
+
+    </el-aside>
   </el-container>
   <el-footer>盛泰科技</el-footer>
 </el-container>
@@ -80,7 +122,42 @@ export default {
         { id: 22, data: '0.0' },
         { id: 23, data: '0.0' },
         { id: 24, data: '0.0' }
-      ]
+      ],
+      autoClean: true,
+      countClean: 3,
+      isAddSulphuricAcid: false,
+      isBasicProcess: false,
+      isSelectAutoCome: false,
+      isConnected: false,
+      consume_num: 0.00,
+      consume_v2: 0.00,
+      adjust_num: 1.00,
+      total_num: 3469,
+      pre_time: ' 6 小时 28 分',
+      test_num: 2312,
+      untest_num: 1158,
+      past_time: ' 5 小时 30 分',
+
+      /* charts */
+      chartData: {
+        columns: ['Name', '体积'],
+        rows: [
+          { Name: '高锰酸钾', 体积: 123 },
+          { Name: '硫酸', 体积: 123 },
+          { Name: '草酸钠', 体积: 223 },
+          { Name: '氢氧化钠', 体积: 123 }
+        ]
+      }
+    }
+  },
+  chartSettings: {
+    barWidth: 10
+  },
+  watch: {
+    activeName (v) {
+      this.$nextTick(_ => {
+        this.$refs[`chart${v}`].echarts.resize()
+      })
     }
   }
 }
@@ -140,5 +217,47 @@ html, body, #app
     height: 18px;
     font-size: 8px;
     padding: 0 2px;
+}
+
+/* right panel */
+.right-panel {
+    font-size: 16px;
+}
+
+.check-groups {
+    padding:  10px;
+}
+.el-checkbox__label {
+    font-size: 16px;
+}
+.blank-consume {
+    padding: 6px;
+    width: 90%;
+    height: 70px;
+    border: 1px solid blue;
+    border-radius: 18px 18px;
+    text-align: center;
+}
+.data-charts {
+    padding: 0px;
+    width: 94%;
+    height: 120px;
+    border: 1px solid blue;
+    border-radius: 18px 18px;
+    text-align: center;
+}
+.ve-histogram {
+    /* width:220px; */
+    height: 120px;
+    top: -40px;
+}
+.summer {
+    padding: 4px;
+    width: 92%;
+    height: 48px;
+    border: 1px solid blue;
+    border-radius: 18px 18px;
+    text-align: center;
+    font-size: 10px;
 }
 </style>
