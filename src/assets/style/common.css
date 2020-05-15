@@ -1,0 +1,26 @@
+.rect_arc {
+    width: 150px;
+    height: 100px;
+    border: 1px solid #00FF;
+    /* border-radius: 8px; */
+}
+
+/** 弧形 */
+.arc {
+  width: 100px;
+  height: 100px;
+  border-style: solid;
+  border-top-width: 10px;
+  border-bottom-width: 0px;
+  border-left-width: 10px;
+  border-right-width: 0px;
+  border-top-color: blue;
+  border-bottom-color: red;
+  border-left-color: red;
+  border-right-color: red;
+  background-color: transparent;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
