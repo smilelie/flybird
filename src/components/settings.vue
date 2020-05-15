@@ -83,15 +83,15 @@ export default {
 <style scoped>
 .system_setting {
   text-align: center;
-  width: 80%;
-  height: 400px;
-  border: 1px solid #00ff;
-  padding: 20px;
-  border-radius: 25% 25% 25% 25%/20% 20% 20% 20%;
+  width: 75%;
+  height: 360px;
+  border: 1px solid gray;
+  padding: 16px;
+  border-radius: 15%;
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -60%);
 }
 .el-row {
     margin-bottom: 12px;
