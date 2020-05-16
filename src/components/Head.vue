@@ -5,9 +5,12 @@
 </template>
 <script>
 export default {
-  name: 'Header'
+  name: 'app-header'
 }
 </script>
-<style scoped>
-
+<style>
+.head-class {
+  box-sizing: border-box;
+  width:100%;
+}
 </style>

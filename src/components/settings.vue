@@ -1,6 +1,6 @@
 <template>
 <div>
-    <Header></Header>
+    <app-header></app-header>
     <div class="system_setting">
         <h2>标 定 系 数</h2>
         <el-row :gutter="2">
@@ -63,19 +63,14 @@
             <el-col :span="3"><span>硫酸设定量</span></el-col>
             <el-col :span="3"><el-input size="small" type="info">5.0</el-input></el-col>
         </el-row>
+        <el-button class="back-button" size="small" type="info">返回</el-button>
     </div>
-    <Footer></Footer>
+    <!-- <app-footer></app-footer> -->
 </div>
 </template>
 
 <script>
-// import Head from '../Head'
-// import Foot from '../Foot'
 export default {
-//   components: {
-//     Header: Head,
-//     Footer: Foot
-//   },
   name: 'setting'
 }
 </script>
@@ -97,5 +92,9 @@ export default {
     margin-bottom: 12px;
 
   }
-
+.back-button {
+  position: absolute;
+  right:-10%;
+  bottom:-10%;
+}
 </style>

@@ -1,9 +1,10 @@
 <template>
 <el-container>
-  <el-header>高锰酸钾指数分析仪</el-header>
+  <!-- <el-header>高锰酸钾指数分析仪</el-header> -->
+  <app-header></app-header>
          <div name="menus">
     <el-row>
-      <el-button type="primary" size="small" plain>开始任务</el-button>
+      <el-button type="primary" size="small" @click="StartTask" plain>开始任务</el-button>
       <el-button type="primary" size="small" plain>新建任务</el-button>
       <el-button type="primary" size="small" plain>取消任务</el-button>
       <el-button type="primary" size="small" plain>管路清洗</el-button>
@@ -12,7 +13,7 @@
       <el-button type="primary" size="small" plain>标准文献</el-button>
       <el-button type="primary" size="small" plain>报警复位</el-button>
       <el-button type="primary" size="small" plain>水浴设置</el-button>
-      <el-button type="primary" size="small" plain>标定系数</el-button>
+      <el-button type="primary" size="small" @click="Setting" plain>标定系数</el-button>
       <el-button type="primary" size="small" plain>关闭系统</el-button>
     </el-row>
   </div>
@@ -141,6 +142,13 @@ export default {
           done()
         })
         .catch(_ => {})
+    },
+    StartTask () {
+      console.log('StartTask')
+    },
+    Setting () {
+      console.log(this)
+      this.$router.push('/setting')
     }
   },
   data: function () {
@@ -219,28 +227,6 @@ export default {
 </script>
 
 <style>
-.el-container {
-    margin-bottom: 1px;
-    height: 100%;
-  }
-  /* .el-header, .el-footer {
-    background-color: rgb(133, 144, 206);
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 24px;
-    line-height: 60px;
-  } */
-  .el-aside {
-    /* background-color: #D3DCE6; */
-    color: #333;
-    text-align: top;
-  }
-
-  .el-main {
-    /* background-color: #E9EEF3; */
-    color: #333;
-    padding: 10px;
-  }
 .box-card {
     font-size: 8px;
     text-align: center;

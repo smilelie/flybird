@@ -13,11 +13,13 @@ import './assets/style/common.css'
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(VCharts)
+Vue.component('app-header', Head)
+Vue.component('app-footer', Foot)
 
 new Vue({
   components: {
-    Header: Head,
-    Footer: Foot
+    'app-header': Head,
+    'app-footer': Foot
   },
   router,
   render: h => h(App)

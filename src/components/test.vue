@@ -1,11 +1,14 @@
 <template>
   <div>
     <!-- 绘制矩形 -->
-    <div class="rect_arc">你好</div>
+    <app-header></app-header>
+    <h1>Content</h1>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'test'
 }

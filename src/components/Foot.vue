@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-  name: 'Footer'
+  name: 'app-footer'
 }
 </script>
 <style scoped>
