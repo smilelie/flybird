@@ -129,10 +129,15 @@
       <el-col :span="6">
       <el-card class="card-data card-data-height2">
       <span class="card-title">参数设置</span>
-          <el-row><label>酸性法量    </label><span>{{acid_count}}</span></el-row>
-          <el-row><label>碱性法量    </label><span>{{jian_count}}</span></el-row>
-          <el-row><label>系数         </label><span>{{mul_count}}</span></el-row>
-          <el-row><label>清洗量 </label><span>{{clean_count}}</span></el-row>
+          <el-row><label>加热等待时间    </label><span>{{cssz_heat_wait_time}}</span></el-row>
+          <el-row><label>滴定等待时间    </label><span>{{cssz_drop_wait_time}}</span></el-row>
+          <el-row><label>快滴后等待时间</label><span>{{cssz_quick_drop_wait_time}}</span></el-row>
+          <el-row><label>滴定速度             </label><span>{{cssz_drop_speed}}</span></el-row>
+          <el-row><label>滴定终点速度    </label><span>{{cssz_drop_end_speed}}</span></el-row>
+          <el-row><label>颜色判定时间    </label><span>{{cssz_color_judge_time}}</span></el-row>
+          <el-row><label>清洗次数             </label><span>{{cssz_clean_times}}</span></el-row>
+          <el-row><label>水浴温度补偿     </label><span>{{cssz_bath_temperature_compensate}}</span></el-row>
+
     </el-card>
     <!-- 开始 结束 实时 -->
     <br/>
@@ -145,9 +150,9 @@
           <el-row :align="center">
             <span class="label-text">实时</span><el-tag type="info"> 21:36</el-tag>
           </el-row>
-
         </el-col>
       </el-row>
+      <br/>
       <el-row type="flex" justify="end" class="menu_buttons">
         <el-button type="info" size="mini">参数设置</el-button>
         <el-button type="info" size="mini">标定设置</el-button>
