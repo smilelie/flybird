@@ -109,7 +109,7 @@
         </div>
 <br/>
         <div class="data-charts">
-            <ve-histogram :data="chartData" :legend-visible="false" :judge-width="true" height="220px"></ve-histogram>
+            <ve-histogram :data="chartData" :extend="chartExtend" :legend-visible="false" :judge-width="false" height="220px"></ve-histogram>
         </div>
 <br/>
         <div class="summer">
@@ -152,6 +152,17 @@ export default {
     }
   },
   data: function () {
+    this.chartExtend = {
+      /* 柱状图宽度 */
+      series: {
+        width: 20
+      },
+      /* 不显示Y轴 */
+      yAxis: {
+        show: true
+      }
+    }
+
     return {
       listData: [
         {
@@ -212,17 +223,14 @@ export default {
         ]
       }
     }
-  },
-  chartSettings: {
-    barWidth: 10
-  },
-  watch: {
-    activeName (v) {
-      this.$nextTick(_ => {
-        this.$refs[`chart${v}`].echarts.resize()
-      })
-    }
   }
+  // watch: {
+  //   activeName (v) {
+  //     this.$nextTick(_ => {
+  //       this.$refs[`chart${v}`].echarts.resize()
+  //     })
+  //   }
+  // }
 }
 </script>
 
@@ -286,9 +294,10 @@ export default {
     text-align: center;
 }
 .ve-histogram {
-    /* width:220px; */
+    padding: 0px;
+    width: 180px;
     height: 120px;
-    top: -40px;
+    top: -45px;
 }
 .summer {
     padding: 4px;
