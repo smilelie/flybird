@@ -4,6 +4,7 @@ import SecondPage from '../components/SP.vue'
 import setting from '../components/settings.vue'
 import options from '../components/option_page.vue'
 import test from '../components/test.vue'
+import control from '../components/control.vue'
 import DataShow from '../components/data_show.vue'
 
 Vue.use(VueRouter)
@@ -16,6 +17,10 @@ const routes = [
   {
     path: '/setting',
     component: setting
+  },
+  {
+    path: '/control',
+    component: control
   },
   {
     path: '/option',
