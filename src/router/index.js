@@ -6,6 +6,7 @@ import options from '../components/option_page.vue'
 import test from '../components/test.vue'
 import control from '../components/control.vue'
 import DataShow from '../components/data_show.vue'
+import timesetting from '../components/timesetting.vue'
 
 Vue.use(VueRouter)
 
@@ -29,6 +30,10 @@ const routes = [
   {
     path: '/show',
     component: DataShow
+  },
+  {
+    path: '/timesetting',
+    component: timesetting
   },
   {
     path: '/test',

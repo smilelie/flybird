@@ -933,6 +933,11 @@ export default {
   transform: translate(-50%);
 }
 
+.full-row {
+  height: 100%;
+  padding: 10px;
+}
+
 .el-button--mini {
   padding: 4px 6px;
   font-size: 12px;
