@@ -29,7 +29,12 @@
                 </el-row>
                 <el-row>
                   <el-col :span="16">
-                    <el-input v-model="write_year" placeholder="请输入年份">
+                    <el-input
+                      v-model="write_year"
+                      placeholder="请输入年份"
+                      size="mini"
+                      onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"
+                    >
                     </el-input>
                   </el-col>
                   <el-col :span="8" class="demonstration">年</el-col>
@@ -37,7 +42,12 @@
 
                 <el-row>
                   <el-col :span="16">
-                    <el-input v-model="write_month" placeholder="请输入月份">
+                    <el-input
+                      v-model="write_month"
+                      placeholder="请输入月份"
+                      size="mini"
+                      onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"
+                    >
                     </el-input>
                   </el-col>
                   <el-col :span="8" class="demonstration">月</el-col>
@@ -45,7 +55,12 @@
 
                 <el-row>
                   <el-col :span="16">
-                    <el-input v-model="write_date" placeholder="请输入日期">
+                    <el-input
+                      v-model="write_date"
+                      placeholder="请输入日期"
+                      size="mini"
+                      onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"
+                    >
                     </el-input>
                   </el-col>
                   <el-col :span="8" class="demonstration">日</el-col>
@@ -53,7 +68,12 @@
 
                 <el-row>
                   <el-col :span="16">
-                    <el-input v-model="write_hour" placeholder="请输入小时">
+                    <el-input
+                      v-model="write_hour"
+                      placeholder="请输入小时"
+                      size="mini"
+                      onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"
+                    >
                     </el-input>
                   </el-col>
                   <el-col :span="8" class="demonstration">时</el-col>
@@ -61,7 +81,12 @@
 
                 <el-row>
                   <el-col :span="16">
-                    <el-input v-model="write_miniter" placeholder="请输入分钟">
+                    <el-input
+                      v-model="write_miniter"
+                      placeholder="请输入分钟"
+                      size="mini"
+                      onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"
+                    >
                     </el-input>
                   </el-col>
                   <el-col :span="8" class="demonstration">分</el-col>
@@ -69,7 +94,12 @@
 
                 <el-row>
                   <el-col :span="16">
-                    <el-input v-model="write_second" placeholder="请输入秒">
+                    <el-input
+                      v-model="write_second"
+                      placeholder="请输入秒"
+                      size="mini"
+                      onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"
+                    >
                     </el-input>
                   </el-col>
                   <el-col :span="8" class="demonstration">秒</el-col>
@@ -89,7 +119,12 @@
                 </el-row>
                 <el-row>
                   <el-col :span="16">
-                    <el-input v-model="read_year" placeholder="请输入年份">
+                    <el-input
+                      v-model="read_year"
+                      placeholder="请输入年份"
+                      size="mini"
+                      onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"
+                    >
                     </el-input>
                   </el-col>
                   <el-col :span="8" class="demonstration">年</el-col>
@@ -97,7 +132,12 @@
 
                 <el-row>
                   <el-col :span="16">
-                    <el-input v-model="read_month" placeholder="请输入月份">
+                    <el-input
+                      v-model="read_month"
+                      placeholder="请输入月份"
+                      size="mini"
+                      onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"
+                    >
                     </el-input>
                   </el-col>
                   <el-col :span="8" class="demonstration">月</el-col>
@@ -105,7 +145,12 @@
 
                 <el-row>
                   <el-col :span="16">
-                    <el-input v-model="read_date" placeholder="请输入日期">
+                    <el-input
+                      v-model="read_date"
+                      placeholder="请输入日期"
+                      size="mini"
+                      onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"
+                    >
                     </el-input>
                   </el-col>
                   <el-col :span="8" class="demonstration">日</el-col>
@@ -113,7 +158,12 @@
 
                 <el-row>
                   <el-col :span="16">
-                    <el-input v-model="read_hour" placeholder="请输入小时">
+                    <el-input
+                      v-model="read_hour"
+                      placeholder="请输入小时"
+                      size="mini"
+                      onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"
+                    >
                     </el-input>
                   </el-col>
                   <el-col :span="8" class="demonstration">时</el-col>
@@ -121,7 +171,12 @@
 
                 <el-row>
                   <el-col :span="16">
-                    <el-input v-model="read_miniter" placeholder="请输入分钟">
+                    <el-input
+                      v-model="read_miniter"
+                      placeholder="请输入分钟"
+                      size="mini"
+                      onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"
+                    >
                     </el-input>
                   </el-col>
                   <el-col :span="8" class="demonstration">分</el-col>
@@ -129,7 +184,12 @@
 
                 <el-row>
                   <el-col :span="16">
-                    <el-input v-model="read_second" placeholder="请输入秒">
+                    <el-input
+                      v-model="read_second"
+                      placeholder="请输入秒"
+                      size="mini"
+                      onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"
+                    >
                     </el-input>
                   </el-col>
                   <el-col :span="8" class="demonstration">秒</el-col>
@@ -146,7 +206,7 @@
             <span class="card-data-title">试用期限</span>
             <el-row :gutter="2" type="flex" justify="center">
               <el-col :span="6">
-                <el-input v-model="limit_year"></el-input>
+                <el-input v-model="limit_year" size="mini"></el-input>
               </el-col>
               <el-col :span="2">
                 <label> 年 </label>
@@ -253,7 +313,7 @@ export default {
 
 .time-show-group {
   float: right;
-  line-height: 20px;
+  line-height: 35px;
 
   font-size: 14px;
 
