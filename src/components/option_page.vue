@@ -219,12 +219,12 @@
               <el-col :span="8">{{ cssz_color_judge_time }}</el-col>
             </el-row>
             <el-row :type="flex" justify="start">
-              <el-col :span="12">清洗次数</el-col>
-              <el-col :span="12">{{ cssz_clean_times }}</el-col>
+              <el-col :span="16">清洗次数</el-col>
+              <el-col :span="8">{{ cssz_clean_times }}</el-col>
             </el-row>
             <el-row :type="flex" justify="start">
-              <el-col :span="12">水浴温度补偿</el-col>
-              <el-col :span="12">{{ cssz_bath_temperature_compensate }}</el-col>
+              <el-col :span="16">水浴温度补偿</el-col>
+              <el-col :span="8">{{ cssz_bath_temperature_compensate }}</el-col>
             </el-row>
           </el-card>
           <!-- 开始 结束 实时 -->

@@ -367,9 +367,9 @@
         </el-col>
       </el-row>
 
-      <el-row :gutter="1" :type="flex" :justify="end">
+      <el-row :gutter="1" :type="flex" :justify="space - between">
         <!-- 进样器Z轴 -->
-        <el-col :span="31">
+        <el-col :span="3.2">
           <el-card class="card-data2">
             <span class="card-data-title">进样器Z轴</span>
             <el-row type="flex" class="bg-gray">
@@ -435,7 +435,7 @@
         </el-col>
 
         <!-- 进样器Y轴 -->
-        <el-col :span="31">
+        <el-col :span="3.2">
           <el-card class="card-data2">
             <span class="card-data-title">进样器Y轴</span>
             <el-row type="flex" class="bg-gray">
@@ -501,7 +501,7 @@
         </el-col>
 
         <!-- 进样器圆盘 -->
-        <el-col :span="30">
+        <el-col :span="3.2">
           <el-card class="card-data2">
             <span class="card-data-title">进样器圆盘</span>
             <el-row type="flex" class="bg-gray">
@@ -560,7 +560,7 @@
         </el-col>
 
         <!-- Z轴控制 -->
-        <el-col :span="30">
+        <el-col :span="3.2">
           <el-card class="card-data2">
             <span class="card-data-title">Z轴控制</span>
             <el-row type="flex" class="bg-gray">
@@ -619,7 +619,7 @@
         </el-col>
 
         <!-- 加样轴 -->
-        <el-col :span="30">
+        <el-col :span="3.2">
           <el-card class="card-data2">
             <span class="card-data-title">加样轴</span>
             <el-row type="flex" class="bg-gray">
@@ -678,7 +678,7 @@
         </el-col>
 
         <!-- 滴定轴 -->
-        <el-col :span="30">
+        <el-col :span="3.2">
           <el-card class="card-data2">
             <span class="card-data-title">滴定轴</span>
             <el-row type="flex" class="bg-gray">
@@ -737,7 +737,7 @@
         </el-col>
 
         <!-- 纯水泵 -->
-        <el-col :span="30">
+        <el-col :span="3.2">
           <el-card class="card-data2">
             <span class="card-data-title">纯水泵</span>
             <el-row type="flex" class="bg-gray">
@@ -854,7 +854,7 @@ export default {
       zaxis_position: '121.0',
 
       drop_axis_speed: '150.0',
-      drop_axis_left: '30.0',
+      drop_axis_left: '20.0',
       drop_axis_right: '-200.0',
       drop_axis_middle: '',
 
@@ -902,7 +902,7 @@ export default {
   border: 1px solid gray;
   border-radius: 8px;
   box-sizing: border-box;
-  font-size: 12px;
+  font-size: 10px;
   /* float: left; */
   margin-left: 20px;
   margin-top: 20px;
@@ -911,13 +911,13 @@ export default {
 
 /* 第二行宽度不同 */
 .card-data2 {
-  width: 155px;
+  width: 146px;
   height: 160px;
   text-align: center;
   border: 1px solid gray;
   border-radius: 8px;
   box-sizing: border-box;
-  font-size: 12px;
+  font-size: 10px;
   /* float: left; */
   margin-left: 20px;
   margin-top: 20px;

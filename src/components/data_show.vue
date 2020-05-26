@@ -556,9 +556,9 @@ export default {
   );*/
 }
 
-.el-button--info {
-  /* background: linear-gradient(to bottom, rgb(197, 191, 191),, gray, rgb(197, 191, 191)); */
-}
+/* .el-button--info {
+  background: linear-gradient(to bottom, rgb(197, 191, 191),, gray, rgb(197, 191, 191));
+} */
 
 .distance_one_line {
   box-sizing: border-box;

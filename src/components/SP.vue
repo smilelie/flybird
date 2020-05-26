@@ -69,8 +69,7 @@
                           :modal-append-to-body="false"
                           :show-close="false"
                           :visible.sync="item.dialogVisible"
-                          width="140px"
-                          height="140px"
+                          width="300px"
                         >
                           <!-- :before-close="handleClose"> -->
                           <el-row>
@@ -597,7 +596,7 @@ export default {
   padding: 0px;
   width: 180px;
   height: 120px;
-  top: -45px;
+  /* top: -45px; */
 }
 .summer {
   padding: 4px;
