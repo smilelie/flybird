@@ -12,7 +12,11 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/SP',
+    path: '/',
+    redirect: '/home'
+  },
+  {
+    path: '/home',
     component: SecondPage
   },
   {

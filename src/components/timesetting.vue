@@ -225,7 +225,9 @@
       <div style="height:24px;"></div>
       <el-row type="flex" justify="end" class="menu_buttons">
         <!-- <div style="height:24px;"></div> -->
-        <el-button type="info" size="mini">操作界面</el-button>
+        <el-button type="info" size="mini" @click="HomePage"
+          >操作界面
+        </el-button>
       </el-row>
     </el-main>
     <el-footer><app-footer></app-footer></el-footer>
@@ -257,6 +259,11 @@ export default {
       start_time: '2020.5.10 11:51:23',
       end_time: '2020.5.13 07:48:19',
       now_time: '2020.5.11 16:43:23'
+    }
+  },
+  methods: {
+    HomePage () {
+      this.$router.back()
     }
   }
 }

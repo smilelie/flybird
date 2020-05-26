@@ -813,7 +813,9 @@
             <el-button type="info" size="small">标定设置</el-button>
             <el-button type="info" size="small">轴设置</el-button>
             <el-button type="info" size="small"> 轴调试</el-button>
-            <el-button type="info" size="small">操作界面</el-button>
+            <el-button type="info" size="small" @click="HomePage"
+              >操作界面</el-button
+            >
           </el-row>
         </el-col>
       </el-row>
@@ -884,6 +886,9 @@ export default {
     switchOff () {
       console.log('off')
       this.switchStatus = 'switch-rect-off'
+    },
+    HomePage () {
+      this.$router.back()
     }
   }
 }

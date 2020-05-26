@@ -440,7 +440,9 @@
         <el-button type="info" size="small">标定设置</el-button>
         <el-button type="info" size="small">轴设置</el-button>
         <el-button type="info" size="small"> 轴调试</el-button>
-        <el-button type="info" size="small">操作界面</el-button>
+        <el-button type="info" size="small" @click="HomePage"
+          >操作界面</el-button
+        >
       </el-row>
     </el-main>
     <div><app-footer></app-footer></div>
@@ -497,6 +499,11 @@ export default {
 
       sample_zaxis_down_pos: '44'
     }
+  },
+  methods: {
+    HomePage () {
+      this.$router.back()
+    }
   }
 }
 </script>
@@ -535,6 +542,12 @@ export default {
   font-size: 12px;
   width: 45px;
   border-radius: 1px;
+  background: linear-gradient(
+    to bottom,
+    rgb(197, 191, 191),
+    gray,
+    rgb(197, 191, 191)
+  );
   /* background: -webkit-linear-gradient(
     top,
     rgb(197, 191, 191),
@@ -544,7 +557,7 @@ export default {
 }
 
 .el-button--info {
-  background: linear-gradient(top, white, gray, white);
+  /* background: linear-gradient(to bottom, rgb(197, 191, 191),, gray, rgb(197, 191, 191)); */
 }
 
 .distance_one_line {
