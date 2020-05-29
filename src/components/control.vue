@@ -367,9 +367,9 @@
         </el-col>
       </el-row>
 
-      <el-row :gutter="1" :type="flex" :justify="space - between">
+      <el-row :gutter="0" :type="flex" :justify="space - between">
         <!-- 进样器Z轴 -->
-        <el-col :span="3.2">
+        <el-col :span="3.1">
           <el-card class="card-data2">
             <span class="card-data-title">进样器Z轴</span>
             <el-row type="flex" class="bg-gray">
@@ -435,7 +435,7 @@
         </el-col>
 
         <!-- 进样器Y轴 -->
-        <el-col :span="3.2">
+        <el-col :span="3.1">
           <el-card class="card-data2">
             <span class="card-data-title">进样器Y轴</span>
             <el-row type="flex" class="bg-gray">
@@ -501,7 +501,7 @@
         </el-col>
 
         <!-- 进样器圆盘 -->
-        <el-col :span="3.2">
+        <el-col :span="3.1">
           <el-card class="card-data2">
             <span class="card-data-title">进样器圆盘</span>
             <el-row type="flex" class="bg-gray">
@@ -560,7 +560,7 @@
         </el-col>
 
         <!-- Z轴控制 -->
-        <el-col :span="3.2">
+        <el-col :span="3.1">
           <el-card class="card-data2">
             <span class="card-data-title">Z轴控制</span>
             <el-row type="flex" class="bg-gray">
@@ -619,7 +619,7 @@
         </el-col>
 
         <!-- 加样轴 -->
-        <el-col :span="3.2">
+        <el-col :span="3.1">
           <el-card class="card-data2">
             <span class="card-data-title">加样轴</span>
             <el-row type="flex" class="bg-gray">
@@ -678,7 +678,7 @@
         </el-col>
 
         <!-- 滴定轴 -->
-        <el-col :span="3.2">
+        <el-col :span="3.1">
           <el-card class="card-data2">
             <span class="card-data-title">滴定轴</span>
             <el-row type="flex" class="bg-gray">
@@ -737,7 +737,7 @@
         </el-col>
 
         <!-- 纯水泵 -->
-        <el-col :span="3.2">
+        <el-col :span="3.1">
           <el-card class="card-data2">
             <span class="card-data-title">纯水泵</span>
             <el-row type="flex" class="bg-gray">
