@@ -33,7 +33,7 @@
     "@vue/cli-service": "~4.3.0",
     "@vue/eslint-config-standard": "^5.1.2",
     "babel-eslint": "^10.1.0",
-    "electron": "^9.0.0",
+    "electron": "^13.6.6",
     "electron-builder": "^22.6.1",
     "vue-cli-plugin-electron-builder": "~1.4.6",
     "eslint": "^6.7.2",
